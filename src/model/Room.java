@@ -1,17 +1,17 @@
 package model;
 
 public class Room {
-    int id;
-    String roomNumber;
-    String type;
-    double price;
-    boolean isAvailable = true;
+    private int id;
+    private String roomNumber;
+    private String type;
+    private double price;
+    private boolean isAvailable = true;
 
     public Room(int id, String roomNumber, String type, double price) {
-        this.id = id;
-        this.roomNumber = roomNumber;
-        this.type = type;
-        this.price = price;
+        this.setId(id);
+        this.setRoomNumber(roomNumber);
+        this.setType(type);
+        this.setPrice(price);
     }
 
     public Room(){}
@@ -60,11 +60,11 @@ public class Room {
     @Override
     public String toString() {
         return "Room{" +
-                "id=" + id +
-                ", roomNumber='" + roomNumber + '\'' +
-                ", type='" + type + '\'' +
-                ", price=" + price +
-                ", isAvailable=" + isAvailable +
+                "id=" + getId() +
+                ", roomNumber='" + getRoomNumber() + '\'' +
+                ", type='" + getType() + '\'' +
+                ", price=" + getPrice() +
+                ", isAvailable=" + isAvailable() +
                 '}';
     }
 

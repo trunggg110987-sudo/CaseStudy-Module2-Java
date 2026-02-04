@@ -1,18 +1,18 @@
 package model;
 
 public class Customer {
-    int id;
-    String name;
-    String phone;
-    String email;
-    String idCard;
+    private int id;
+    private String name;
+    private String phone;
+    private String email;
+    private String idCard;
 
     public Customer(int id, String name, String phone, String email, String idCard) {
-        this.id = id;
-        this.name = name;
-        this.phone = phone;
-        this.email = email;
-        this.idCard = idCard;
+        this.setId(id);
+        this.setName(name);
+        this.setPhone(phone);
+        this.setEmail(email);
+        this.setIdCard(idCard);
     }
 
     public Customer() {}
@@ -60,11 +60,11 @@ public class Customer {
     @Override
     public String toString() {
         return "Customer{" +
-                "email='" + email + '\'' +
-                ", id=" + id +
-                ", name='" + name + '\'' +
-                ", phone='" + phone + '\'' +
-                ", idCard='" + idCard + '\'' +
+                "email='" + getEmail() + '\'' +
+                ", id=" + getId() +
+                ", name='" + getName() + '\'' +
+                ", phone='" + getPhone() + '\'' +
+                ", idCard='" + getIdCard() + '\'' +
                 '}';
     }
 }

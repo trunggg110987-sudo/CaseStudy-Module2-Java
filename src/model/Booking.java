@@ -1,20 +1,20 @@
 package model;
 
 public class Booking {
-    int id;
-    Customer customer;
-    Room room;
-    String checkInDate;
-    String checkOutDate;
-    String status;
-    double totalPrice;
+    private int id;
+    private Customer customer;
+    private Room room;
+    private String checkInDate;
+    private String checkOutDate;
+    private String status;
+    private double totalPrice;
 
     public  Booking(int id, Customer customer, Room room,  String checkInDate, String checkOutDate) {
-        this.id = id;
-        this.customer = customer;
-        this.room = room;
-        this.checkInDate = checkInDate;
-        this.checkOutDate = checkOutDate;
+        this.setId(id);
+        this.setCustomer(customer);
+        this.setRoom(room);
+        this.setCheckInDate(checkInDate);
+        this.setCheckOutDate(checkOutDate);
     }
 
     public Booking(){}
@@ -81,13 +81,17 @@ public class Booking {
     @Override
     public String toString() {
         return "Booking{" +
-                "checkInDate='" + checkInDate + '\'' +
-                ", id=" + id +
-                ", customer=" + customer +
-                ", room=" + room +
-                ", checkOutDate='" + checkOutDate + '\'' +
-                ", status='" + status + '\'' +
-                ", totalPrice=" + totalPrice +
+                "checkInDate='" + getCheckInDate() + '\'' +
+                ", id=" + getId() +
+                ", customer=" + getCustomer() +
+                ", room=" + getRoom() +
+                ", checkOutDate='" + getCheckOutDate() + '\'' +
+                ", status='" + getStatus() + '\'' +
+                ", totalPrice=" + getTotalPrice() +
                 '}';
+    }
+
+    public int getId() {
+        return id;
     }
 }
